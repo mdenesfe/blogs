@@ -4,7 +4,6 @@ import { Mdx } from "@/components/mdx";
 import { tr } from "date-fns/locale";
 import Container from "@/components/container";
 import { notFound } from "next/navigation";
-import ClapsButton from "@/components/claps";
 import BaseLink from "@/components/link";
 
 type Props = {
@@ -80,10 +79,6 @@ export default async function BlogPost({ params }) {
         </header>
 
         <Mdx code={post.body.code} />
-
-        <div className="mt-20 flex justify-center">
-          <ClapsButton url={post.tweetUrl} />
-        </div>
 
         <div className="mt-20 divide-y rounded border dark:divide-zinc-800 dark:border-zinc-800">
           {data.map((c) => (

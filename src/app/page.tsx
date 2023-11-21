@@ -11,7 +11,7 @@ export default function Index() {
           <Title>
             <b className="font-semibold">hi, i'm enes 👋</b>
             <br />
-            I am an entrepreneur. 
+            i am an entrepreneur. 
           </Title>
 
           <p className="text-xl">
@@ -19,7 +19,7 @@ export default function Index() {
           </p>
 
           <p className="text-xl">
-          here I will tell you the story of my love for coding, my entrepreneurial adventures and my successful(!) projects.
+          here i will tell you the story of my love for coding, my entrepreneurial adventures and my successful(!) projects.
           </p>
         </div>
 

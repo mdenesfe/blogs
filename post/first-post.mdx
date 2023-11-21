@@ -1,0 +1,62 @@
+---
+date: "2023-11-21"
+title: "understanding the inner workings of printf: a deep dive into the ft_printf project"
+subtitle: "ft_printf project"
+tweetUrl: 
+---
+
+## introduction
+
+the `printf` function is a widely used C library function that is used to print text to the standard output. it's a powerful and flexible function that allows developers to format and print text in a variety of ways. but have you ever wondered how the `printf` function works under the hood? In this article, we will take a deep dive into the `ft_printf` project, a recreation of the `printf` function that was created to understand the inner workings of the original function.
+
+## background
+
+the `ft_printf` project was created as a learning exercise to understand the inner workings of the `printf` function. the goal of the project was to create a similar function from scratch, using only the C language and a few helper functions. the function takes a string and a list of arguments and prints them to the standard output. the code includes several helper functions such as `ft_putchar`, `ft_putstr`, `ft_putnbr`, `ft_putadd`, and `ft_putnbr_hex`, which are used to handle various types of input.
+
+## how it works
+
+
+the `ft_printf` function starts by initializing the variable argument list using `va_start`. then, it initializes a variable `len` to keep track of the number of characters printed. the function then iterates through the input string and checks for the presence of the '%' character, which indicates that the next character is a conversion specifier. if '%' is found, the function calls the `choose` function passing the next character and the variable argument list as arguments. the `choose` function then determines which of the conversion specifiers is used and calls the appropriate helper function. if the '%' character is not found, the function simply prints the current character. the variable argument list is closed using `va_end`. finally, the function returns the number of characters printed.
+
+### supported conversion specifiers
+
+- `%c`: single character
+- `%s`: string
+- `%p`: pointer address
+- `%d`: signed decimal integer
+- `%i`: signed decimal integer
+- `%u`: unsigned
+- `%x`: unsigned hexadecimal integer (lowercase)
+- `%X`: unsigned hexadecimal integer (uppercase)
+
+### flags
+
+- `'0'`: zero padding
+- `'-'`: left alignment
+- `'+'`: signed numbers must always begin with a sign
+- `' '`: signed numbers should begin with a sign or a space
+- `'#'`: alternate form
+- `'*'`: field width is specified as an argument
+- `'.'`: precision is specified as an argument
+
+## examples
+
+here's an example of how to use the `ft_printf` function:
+
+```c
+ft_printf("hello, %s!\n", "world");
+ft_printf("the answer is %d\n", 42);
+ft_printf("%x in hex is %d in decimal\n", 255, 255);
+
+```
+
+output:
+
+```c
+hello, world!
+the answer is 42
+ff in hex is 255 in decimal
+
+```
+
+To access the source codes: [ft_printf on GitHub](https://github.com/your-github/ft_printf)
