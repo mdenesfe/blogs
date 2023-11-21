@@ -34,7 +34,7 @@ export async function generateStaticParams(): Promise<Props["params"][]> {
 
 async function getPostCommits(filePath: string) {
   const res = await fetch(
-    `https://api.github.com/repos/ademilter/homepage/commits?path=${filePath}`,
+    `https://api.github.com/repos/mdenesfe/blogs/commits?path=${filePath}`,
     {
       headers: {
         Accept: "application/vnd.github+json",
