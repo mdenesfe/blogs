@@ -17,17 +17,17 @@ export async function generateMetadata({
 }: {
   params: Props["params"];
 }) {
-  const post = allPosts.find((post: Post) => post.slug === params.slug) as Post;
+  const Post = allPosts.find((Post: Post) => Post.slug === params.slug) as Post;
 
   return {
-    title: post.title,
-    description: post.subtitle,
+    title: Post.title,
+    description: Post.subtitle,
   };
 }
 
 export async function generateStaticParams(): Promise<Props["params"][]> {
-  return allPosts.map((post) => ({
-    slug: post.slug,
+  return allPosts.map((Post) => ({
+    slug: Post.slug,
   }));
 }
 
@@ -50,35 +50,35 @@ async function getPostCommits(filePath: string) {
 }
 
 export default async function BlogPost({ params }) {
-  const post: Post = allPosts.find(
-    (post: Post) => post.slug === params.slug
+  const Post: Post = allPosts.find(
+    (Post: Post) => Post.slug === params.slug
   ) as Post;
 
-  if (!post) {
+  if (!Post) {
     notFound();
   }
 
-  const data = await getPostCommits(post._raw.sourceFilePath);
+  const data = await getPostCommits(Post._raw.sourceFilePath);
 
   return (
     <Container>
-      <article className="post">
+      <article className="Post">
         <header>
-          <h1 className="shine text-2xl font-semibold">{post.title}</h1>
-          <h2 className="mt-2 text-xl">{post.subtitle}</h2>
+          <h1 className="shine text-2xl font-semibold">{Post.title}</h1>
+          <h2 className="mt-2 text-xl">{Post.subtitle}</h2>
 
           <div className="mt-10 flex items-center space-x-2 opacity-60">
-            <time dateTime={post.date}>
-              {format(parseISO(post.date), "d LLLL yyyy", {
+            <time dateTime={Post.date}>
+              {format(parseISO(Post.date), "d LLLL yyyy", {
                 locale: tr,
               })}
             </time>
             <span>·</span>
-            <span>{post.readingTime.text}</span>
+            <span>{Post.readingTime.text}</span>
           </div>
         </header>
 
-        <Mdx code={post.body.code} />
+        <Mdx code={Post.body.code} />
 
         <div className="mt-20 divide-y rounded border dark:divide-zinc-800 dark:border-zinc-800">
           {data.map((c) => (

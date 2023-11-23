@@ -1,9 +1,9 @@
 export const META = {
-  title: "Enes Demir",
-  description: "Designer, developer, creator and photographer",
+  title: "enes demir",
+  description: "girişimci, yazılımcı, fizik ve matematik hayranı",
   url: "https://mdenesfe.dev",
   email: "mdenesfe@gmail.com",
-  name: "Enes Demir",
+  name: "enes demir",
   social: {
     twitter: "https://twitter.com/mdenesfe",
     medium: "https://medium.com/@mdenesfe",

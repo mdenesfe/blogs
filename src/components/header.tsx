@@ -8,8 +8,8 @@ import cx from "@/lib/cx";
 import Container from "./container";
 
 const MENU = {
-  "/": "about",
-  "/post": "articles ✨",
+  "/": "hakkımda 🙋‍♂️",
+  "/post": "yazılar ✨",
 
 };
 
@@ -54,7 +54,7 @@ export default function Header() {
               setIsNavOpen(true);
             }}
           >
-            <span>{MENU[path]}</span>
+            <span>menu</span>
             <IconArrowDropDown className="opacity-50" />
           </button>
         )}

@@ -14,7 +14,7 @@ const inter = Inter({
   subsets: ["latin-ext"],
 });
 
-const title = "Enes Demir";
+const title = "enes demir";
 const description = "Designer, developer, creator and photographer.";
 const url = "https://mdenesfe.com";
 const locale = "tr-TR";

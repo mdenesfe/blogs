@@ -7,8 +7,8 @@ import Container from "@/components/container";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "articles",
-  description: "articles about something.",
+  title: "yazilar",
+  description: "bir şeyler.",
 };
 
 function getData() {

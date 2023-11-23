@@ -1,5 +1,5 @@
 import NextImage from "next/image";
-import Social from "@/components/social";
+import Social from "@/components/social"; 
 import Title from "@/components/title";
 import Container from "@/components/container";
 
@@ -9,17 +9,13 @@ export default function Index() {
       <Container>
         <div className="space-y-6">
           <Title>
-            <b className="font-semibold">hi, i'm enes 👋</b>
+            <b className="font-semibold">selam, ben enes 👋</b>
             <br />
-            i am an entrepreneur. 
+            girişimciyim
           </Title>
 
           <p className="text-xl">
-            computer engineering student, software developer, entrepreneurial spirit and theoretical physics enthusiast.
-          </p>
-
-          <p className="text-xl">
-          here i will tell you the story of my love for coding, my entrepreneurial adventures and my successful(!) projects.
+            Burada kodlamaya olan aşkımın, girişimcilik maceralarımın ve başarılı(!) projelerimin hikayesini anlatacağım.
           </p>
         </div>
 
@@ -28,7 +24,7 @@ export default function Index() {
         </div>
       </Container>
 
-      <Container size="large" className="mt-20">
+      <Container size="default" className="mt-20">
         <NextImage
           src="/photos/mdenesfe.png"
           alt="mdenesfe"
