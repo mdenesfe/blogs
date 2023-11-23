@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="mt-40">
       <Container>
         <p>
-          {" "}
+          {" enes demir"}
           <StyleLink href="#">
           </StyleLink>{" "}
           .

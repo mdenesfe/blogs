@@ -7,8 +7,8 @@ import Container from "@/components/container";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "yazilar",
-  description: "bir şeyler.",
+  title: "articles",
+  description: "articles about something.",
 };
 
 function getData() {
@@ -34,12 +34,12 @@ export default function PostsPage() {
         <div className="space-y-8">
           {posts.map((post) => {
             return (
+              <NextLink href={`/post/${post.slug}`}>
               <article key={post._id}>
                 <header>
                   <h3 className="shine font-semibold">
-                    <NextLink href={`/post/${post.slug}`}>
+                    
                       {post.title}
-                    </NextLink>
                   </h3>
                   <p className="mt-1">{post.subtitle}</p>
                 </header>
@@ -54,6 +54,7 @@ export default function PostsPage() {
                   <span>{post.readingTime.text}</span>
                 </footer>
               </article>
+              </NextLink>
             );
           })}
         </div>
